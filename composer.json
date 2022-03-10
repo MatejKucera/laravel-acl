@@ -1,0 +1,23 @@
+{
+    "name": "matejkucera/laravel-acl",
+    "description": "Library for Laravel which provides ACL configuration based on user role and accessed controllers.",
+    "type": "library",
+    "keywords": ["laravel", "access list control", "acl"],
+    "homepage": "https://gitlab.vse.cz/phplibs/laravel-acl",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MatejKucera",
+            "email": "matej.kucera@vse.cz"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "MatejKucera\\LaravelAcl\\": "src/"
+        }
+    },
+	"require": {
+	    "php": "^7.1"
+    }
+}

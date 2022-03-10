@@ -1,0 +1,5 @@
+image: $CI_REGISTRY/docker-images/php-unit-testing
+
+test:app:
+  script:
+  - composer install
