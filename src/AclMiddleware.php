@@ -44,7 +44,7 @@ class AclMiddleware
         $allowedGroups = config('acl.permissions.'.$configRouteStack);
 
         if(!$allowedGroups) {
-            config('acl.onDenied')();
+            $this->_deny();
         }
 
         $isAllowed = false; // prepared field which will be set to true if we are going to find adequate role
@@ -58,7 +58,18 @@ class AclMiddleware
         if($this->_isAllowed($allowedGroups, $userGroups)) {
             return $next($request);
         } else {
-            config('acl.onDenied')();
+            $this->_deny();
+        }
+    }
+
+    /**
+     * Action run on denied.
+     */
+    private function _deny() {
+        if(config('acl.onDenied.abort')) {
+            abort(config('acl.onDenied.code', config('acl.onDenied.message')));
+        } else {
+            config('acl.onDenied.function')();
         }
     }
 
