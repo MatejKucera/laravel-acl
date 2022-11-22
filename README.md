@@ -1,26 +1,4 @@
-# Laravel IP Restriction
+# Laravel ACL
 
 ## Description 
-
-
-
-## Build & coverage status
-
-[![build status](https://gitlab.vse.cz/phplibs/laravel-ip-restriction/badges/master/build.svg)](https://gitlab.vse.cz/phplibs/laravel-ip-restriction)
-[![coverage status](https://gitlab.vse.cz/phplibs/laravel-ip-restriction/badges/master/coverage.svg)](https://gitlab.vse.cz/phplibs/laravel-ip-restriction)
-
-## Installation
-
-Composer:
-```
-composer require matejkucera/laravel-ip-restriction
-```
-
-## Usage
-```php
-
-```
-
-## Contact
-
-If you would like to get in touch with me, send me an email to matej.kucera@vse.cz
+"Quick & dirty" solution for controller/action based authorization, mainly used in my projects for prototyping, not for production use. 
